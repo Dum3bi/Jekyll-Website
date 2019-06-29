@@ -1,4 +1,9 @@
 title: Dum3bi
+url: http://dum3bi.com
+description: Insert tagline here
+
+collections:
+  portfolio:
 
 markdown: kramdown
 

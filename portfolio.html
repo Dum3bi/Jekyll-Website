@@ -1,5 +1,6 @@
 ---
 title: Portfolio
+order: 3
 layout: default
 ---
 
@@ -23,76 +24,28 @@ layout: default
 
             <div class="masonry__brick">
                 <div class="item-folio">
-
+                    {% for item in site.portfolio %}
                     <div class="item-folio__thumb">
-                        <img src="images\portfolio\gallery\cap-front.jpg" alt="dentiti baseball cap" class="lazyload">
+                        <img src="{{ item.image_path }}" alt="{{ item.project_name }}" class="lazyload">
                     </div>
 
                     <div class="item-folio__text">
                         <h3 class="item-folio__title">
-                            D3ntiti
+                            {{ item.project_name }}
                         </h3>
                         <p class="item-folio__cat">
-                            Brand Identity, Apparel and Marketing Design
+                          {{ item.category }}
                         </p>
                     </div>
 
-                    <a href="#0" class="item-folio__project-link" title="Project link">
+                    <a href="{{ item.link }}" class="item-folio__project-link" title="Project link">
                         <i class="im im-link"></i>
                     </a>
-
+                   {% endfor %}
 
                 </div> <!-- end item-folio -->
             </div> <!-- end masonry__brick -->
 
-            <div class="masonry__brick">
-                <div class="item-folio">
-
-                    <div class="item-folio__thumb">
-                        <img src="images\portfolio\gallery\Dumebi_app_concept_design.jpg" alt="Lamborghini aventador coupe app ui design by dumebi iwuchukwu" class="lazyload">
-                    </div>
-
-                    <div class="item-folio__text">
-                        <h3 class="item-folio__title">
-                      Avendator <br>
-                      Coupé
-                        </h3>
-                        <p class="item-folio__cat">
-                           APP UI Design
-                        </p>
-                    </div>
-
-                    <a href="#0" class="item-folio__project-link" title="Project link">
-                        <i class="im im-link"></i>
-                    </a>
-
-
-                </div> <!-- end item-folio -->
-            </div> <!-- end masonry__brick -->
-
-
-            <div class="masonry__brick">
-                <div class="item-folio">
-
-                    <div class="item-folio__thumb">
-                      <img src="images\portfolio\gallery\Taruwa Festival 2019.jpg" alt="Taruwa Festival 2019 identity and communication design by Dumebi Iwuchukwu" class="lazyload">
-                    </div>
-
-                    <div class="item-folio__text">
-                        <h3 class="item-folio__title">
-                            Taruwa Festival 2019
-                        </h3>
-                        <p class="item-folio__cat">
-                           Identity & Communication Design
-                        </p>
-                    </div>
-
-                    <a href="#0" class="item-folio__project-link" title="Project link">
-                        <i class="im im-link"></i>
-                    </a>
-
-                </div> <!-- end item-folio -->
-            </div> <!-- end masonry__brick -->
 
 
         </div>
